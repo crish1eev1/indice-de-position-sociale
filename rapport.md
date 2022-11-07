@@ -52,9 +52,6 @@ Les données IDS sont disponibles par établissement (écoles et collèges).<br>
 ###  1.1 Distribution privé/public des écoles et collèges selon IDS
 <img src="./violin-distribution-prive-public-selon-ips_no-title.png" alt="violin-distribution-prive-public-selon-ips" width="600"/>
 
-<iframe src="./violin-distribution-prive-public-selon-ips_no-title.html" width="100%" height="400" seamless="seamless" frameBorder="0"> </iframe>
-
-
 
 |                    |   Nombre      |  IPS moyen |  Ecart-type |   Min       |   Max       |   Mediane   |
 |--------------------|---------------|------------|-------------|-------------|-------------|-------------|

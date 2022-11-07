@@ -43,32 +43,34 @@ Le code permettant la collecte, la structuration et le traitement des données a
 
 ## 1. Répartition public/privé des écoles françaises selon l'indice de position sociale
 #### Définition de l'Indice de Position Sociale (IPS) selon wikipedia
->L'indice de position sociale des élèves (IPS) est un outil de mesure quantitatif de la situation sociale des élèves face aux apprentissages dans les établissements scolaires français. **Plus l'indice est élevé, plus l'élève évolue dans un contexte familial favorable aux apprentissages**. Cet indice est construit à partir des professions et catégories socioprofessionnelles (PCS) des représentants légaux des élèves. 
+>L'indice de position sociale des élèves (IPS) est un outil de mesure quantitatif de la situation sociale des élèves face aux apprentissages dans les établissements scolaires français. **Plus l'indice est élevé, plus l'élève évolue dans un contexte familial favorable aux apprentissages. Cet indice est construit à partir des professions et catégories socioprofessionnelles (PCS) des représentants légaux des élèves**. 
 >Il est utilisé pour décrire les populations scolaires (milieu social plus ou moins favorable et mixité sociale) dans les écoles, collèges et lycées mais aussi pour classer les établissements scolaires et leur attribuer des moyens en conséquence. 
 L'indice de position sociale (IPS) des élèves est un indice sans dimension compris entre 38 et 1791. Plus cet indice est élevé, plus le contexte familial de l'élève est favorable à sa réussite scolaire. 
 
-Les données IDS disponibles le sont par établissement.<br> Dans cette section, lorsqu'on parlera d'un IDS moyen pour le public ou le privé, il faut le lire en tant que moyenne des IDS des établissements (non pondéré par le nombre d'élèves).
+Les données IDS sont disponibles par établissement (écoles et collèges).<br> Dans cette section, lorsqu'on parlera d'un IDS moyen pour le public ou le privé, il faut le lire en tant que moyenne des IDS des établissements (non pondérée par le nombre d'élèves).
 
 ###  1.1 Distribution privé/public des écoles et collèges selon IDS
 <img src="./violin-distribution-prive-public-selon-ips_no-title.png" alt="violin-distribution-prive-public-selon-ips" width="600"/>
+
+<iframe src="./violin-distribution-prive-public-selon-ips_no-title.html" width="100%" height="400" seamless="seamless" frameBorder="0"> </iframe>
+
 
 
 |                    |   Nombre      |  IPS moyen |  Ecart-type |   Min       |   Max       |   Mediane   |
 |--------------------|---------------|------------|-------------|-------------|-------------|-------------|
 | Ecoles publiques   |         27549 |      101.2 |     15.7    |        49.6 |       155.6 |       101.9 |
 | Ecoles privées     |          4542 |      112.2 |       15.1  |        56.8 |       155.4 |       110.4 |
-|                    |               |            |             |             |             |             |
 | Collèges publics   |         5303  |      99.9  |     15.3    |        51.3 |       157.6 |       100.5 |
 | Collèges privés    |          1659 |      114.2 |       16.0  |        66.0 |       154.9 |       112.8 |
 
 
-On constate une distribution inégale entre public et privé avec notamment des queues de distribution qui s'affinent rapidement lorsque l'IPS s'élève pour le public et inversement. Cette inégalité de répartition est plus importante pour les collèges que pour les écoles. 
+On constate une distribution inégale entre établissements publics et privés avec un IPS moyen très supérieur dans le privé mais aussi des queues de distribution à l'allure inversée. En effet, les queues de distribution du public s'affinent très rapidement lorsque l'IPS augmente et inversement. Cette inégalité de répartition est plus importante pour les collèges que pour les écoles. 
 
 Divisons les établissements scolaires en 7 groupes d'IPS afin de mieux nous rendre compte de cette distribution inégale. 
 
 ###  1.2 Répartition public/privé des établissments selon 7 tranches d'IDS
 #### Ecoles en pourcentage du nombre d'établissements
-- Parmi les écoles avec un IPS inférieur à 90, 3,2% sont privées.
+- Parmi les écoles avec un IPS inférieur à 90, seules 3,2% sont privées.
 - Parmi celles avec un IPS supérieur à 140, 60,3% sont privées.
 
 <img src="./ecole_repartition-prive-public-selon-ips_no-title.png" alt="ecole_repartition-prive-public-selon-ips" width="600"/>
@@ -89,8 +91,8 @@ Divisons les établissements scolaires en 7 groupes d'IPS afin de mieux nous ren
 
 <img src="./college_repartition-prive-public-selon-ips_no-title.png" alt="college_repartition-prive-public-selon-ips" width="600"/>
 
-###### En valeur absolue du nombre d'établissements
-| secteur            |   Moins de 90 |   90 à 100 |   100 à 110 |   110 à 120 |   120 à 130 |   130 à 140 |   Plus de 140 |
+#### Collèges en valeur absolue du nombre d'établissements
+|                    |   Moins de 90 |   90 à 100 |   100 à 110 |   110 à 120 |   120 à 130 |   130 à 140 |   Plus de 140 |
 |--------------------|---------------|------------|-------------|-------------|-------------|-------------|---------------|
 | privé sous contrat |            76 |        245 |         396 |         383 |         270 |         169 |           120 |
 | public             |          1268 |       1291 |        1468 |         812 |         325 |         105 |            34 |

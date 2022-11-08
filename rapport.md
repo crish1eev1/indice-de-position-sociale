@@ -42,7 +42,7 @@
         </p>Données extraites de la base Filosofi de l'INSEE spécifiant le niveau de vie des Français pour chaque commune française sur l'année 2013</td>
         <td><p style="text-align:left">Données extraites de la base Filosofi de l'INSEE</p></td>
         <td><p style="text-align:left"><a href="https://www.data.gouv.fr/fr/datasets/revenus-des-francais-a-la-commune/", target="_blank">Revenus des Français à la commune</a></p></td>
-        <td><p style="text-align:left">October, 2022</p></td>
+        <td><p style="text-align:left">2014</p></td>
     </tr>
 </table>   
 
@@ -106,7 +106,14 @@ Divisons les établissements scolaires en 7 groupes d'IPS afin de mieux nous ren
 
 </br>
 
-###  1.3 Répartition géographique des établissements publics/privés 
+
+###  1.3 Répartition public/privé des établissments selon IDS par région (année scolaire 2021-2022)
+
+
+
+## 2. Répartition géographique des établissements publics/privés
+
+###  2.1 Répartition géographique de la métropole
 
 #### Répartition géographique des écoles publiques/privées versus densité de population (année scolaire 2021-2022)
 <img src="./graphs/geolocation-ecole-prive-public-selon-ips_no-title.png" alt="geolocation-ecole-prive-public-selon-ips" height="400"/>
@@ -117,4 +124,13 @@ Divisons les établissements scolaires en 7 groupes d'IPS afin de mieux nous ren
 #### Densité de population en France (2019)
 <img src="./graphs/france-densite-communes-2019.png" alt="geolocation-college-prive-public-selon-ips" height="400"/>
 
-On constate une forte implentation des établissements privés dans les bassins de populations les plus denses.
+On constate une forte implentation des établissements privés dans les bassins de populations les plus denses alors qu'ils sont peu présents en zones rurales (à l'exception de la Bretagne et la Loire-Atlantique)
+
+
+<a href="https://github.com/crish1eev1/public-private-distribution-french-schools/graphs/geolocation-college-prive-public-selon-ips_no-title.html" download="">
+  <img src="/images/myw3schoolsimage.jpg" alt="" width="104" height="142">
+</a>
+
+
+###  2.2 Proportion des établissements publics/privés selon la région
+

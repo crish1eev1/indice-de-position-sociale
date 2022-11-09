@@ -59,7 +59,10 @@ Les données IDS sont disponibles par établissement (écoles et collèges). Dan
 <br></br>
 
 ###  1.1 Distribution privé/public des écoles et collèges selon IDS (année scolaire 2021-2022)
-<img src="./graphs/violin-distribution-prive-public-selon-ips_no-title.png" alt="violin-distribution-prive-public-selon-ips" width="600"/>
+
+<a href="https://crish1eev1.github.io/images/graphs/ips_2022-11-09_13-21-56.html" download="">
+  <img src="./graphs/violin-distribution-prive-public-selon-ips_no-title.png" alt="violin-distribution-prive-public-selon-ips" width="700">
+</a>
 
 
 |                    |   Nombre      |  IPS moyen |  Ecart-type |   Min       |   Max       |   Mediane   |
@@ -80,7 +83,7 @@ Divisons les établissements scolaires en 7 groupes d'IPS afin de mieux nous ren
 - Parmi les écoles avec un IPS inférieur à 90, seules 3,2% sont privées.
 - Parmi celles avec un IPS supérieur à 140, 60,3% sont privées.
 
-<img src="./graphs/ecole_repartition-prive-public-selon-ips_no-title.png" alt="ecole_repartition-prive-public-selon-ips" width="600"/>
+<img src="./graphs/ecole_repartition-prive-public-selon-ips_no-title.png" alt="ecole_repartition-prive-public-selon-ips" width="700"/>
 
 
 
@@ -96,7 +99,7 @@ Divisons les établissements scolaires en 7 groupes d'IPS afin de mieux nous ren
 - Parmi les collèges avec un IPS inférieur à 90, 5,7% sont privées.
 - Parmi celles avec un IPS supérieur à 140, 77,9% sont privées.
 
-<img src="./graphs/college_repartition-prive-public-selon-ips_no-title.png" alt="college_repartition-prive-public-selon-ips" width="600"/>
+<img src="./graphs/college_repartition-prive-public-selon-ips_no-title.png" alt="college_repartition-prive-public-selon-ips" width="700"/>
 
 #### Collèges en valeur absolue du nombre d'établissements (année scolaire 2021-2022)
 |                    |   Moins de 90 |   90 à 100 |   100 à 110 |   110 à 120 |   120 à 130 |   130 à 140 |   Plus de 140 |
@@ -116,21 +119,27 @@ Divisons les établissements scolaires en 7 groupes d'IPS afin de mieux nous ren
 ###  2.1 Répartition géographique de la métropole
 
 #### Répartition géographique des écoles publiques/privées versus densité de population (année scolaire 2021-2022)
-<img src="./graphs/geolocation-ecole-prive-public-selon-ips_no-title.png" alt="geolocation-ecole-prive-public-selon-ips" height="400"/>
+<a href="https://crish1eev1.github.io/images/graphs/geolocation-ecole-prive-public-selon-ips_no-title.html" download="">
+  <img src="./graphs/geolocation-ecole-prive-public-selon-ips_no-title.png" alt="geolocation-ecole-prive-public-selon-ips" width="700">
+</a>
 
 #### Répartition géographique des collèges publics/privés versus densité de population (année scolaire 2021-2022)
-<img src="./graphs/geolocation-college-prive-public-selon-ips_no-title.png" alt="geolocation-college-prive-public-selon-ips" height="400"/>
+<a href="https://crish1eev1.github.io/images/graphs/geolocation-college-prive-public-selon-ips_no-title.html" download="">
+  <img src="./graphs/geolocation-college-prive-public-selon-ips_no-title.png" alt="geolocation-college-prive-public-selon-ips" width="700">
+</a>
 
 #### Densité de population en France (2019)
 <img src="./graphs/france-densite-communes-2019.png" alt="geolocation-college-prive-public-selon-ips" height="400"/>
 
-On constate une forte implentation des établissements privés dans les bassins de populations les plus denses alors qu'ils sont peu présents en zones rurales (à l'exception de la Bretagne et la Loire-Atlantique)
+On constate une forte implentation des établissements privés dans les bassins de populations les plus denses alors qu'ils sont peu présents en zones rurales. Ceci à l'exception de la Bretagne et la Loire-Atlantique ou les établissements privés sont présents icompris en zones rurales. 
 
 
-<a href="https://github.com/crish1eev1/public-private-distribution-french-schools/graphs/geolocation-college-prive-public-selon-ips_no-title.html" download="">
+<a href="https://crish1eev1.github.io/images/geolocation-ecole-prive-public-selon-ips_no-title.html" download="">
   <img src="/images/myw3schoolsimage.jpg" alt="" width="104" height="142">
 </a>
 
 
 ###  2.2 Proportion des établissements publics/privés selon la région
 
+
+## 3. Brevet

@@ -58,7 +58,7 @@ L'indice de position sociale (IPS) des élèves est un indice sans dimension com
 Les données IDS sont disponibles par établissement (écoles et collèges). Dans cette section, lorsqu'on parlera d'un IDS moyen pour le public ou le privé, il faut le lire en tant que moyenne des IDS des établissements (non pondérée par le nombre d'élèves).
 <br></br>
 
-###  1.1 Distribution privé/public des écoles et collèges selon IDS (année scolaire 2021-2022)
+###  1.1 Distribution public/privé des écoles et collèges selon IDS (année scolaire 2021-2022)
 
 <a href="https://crish1eev1.github.io/images/graphs/ips_2022-11-09_13-21-56.html" download="">
   <img src="./graphs/violin-distribution-prive-public-selon-ips_no-title.png" alt="violin-distribution-prive-public-selon-ips" width="700">
@@ -111,35 +111,84 @@ Divisons les établissements scolaires en 7 groupes d'IPS afin de mieux nous ren
 
 
 ###  1.3 Répartition public/privé des établissments selon IDS par région (année scolaire 2021-2022)
+Avant d'anlyser les écarts entre régions dans le détail, voici un aperçu de la répartition géographique globale en France métropolitaine.</br>
+Cliquez sur les graphs si vous souhaitez naviguer vous même sur la carte. 
 
-
-
-## 2. Répartition géographique des établissements publics/privés
-
-###  2.1 Répartition géographique de la métropole
-
-#### Répartition géographique des écoles publiques/privées versus densité de population (année scolaire 2021-2022)
+#### Répartition géographique des écoles publiques/privées (année scolaire 2021-2022)
 <a href="https://crish1eev1.github.io/images/graphs/geolocation-ecole-prive-public-selon-ips_no-title.html" download="">
   <img src="./graphs/geolocation-ecole-prive-public-selon-ips_no-title.png" alt="geolocation-ecole-prive-public-selon-ips" width="700">
 </a>
 
-#### Répartition géographique des collèges publics/privés versus densité de population (année scolaire 2021-2022)
+#### Répartition géographique des collèges publics/privés (année scolaire 2021-2022)
 <a href="https://crish1eev1.github.io/images/graphs/geolocation-college-prive-public-selon-ips_no-title.html" download="">
   <img src="./graphs/geolocation-college-prive-public-selon-ips_no-title.png" alt="geolocation-college-prive-public-selon-ips" width="700">
 </a>
 
-#### Densité de population en France (2019)
-<img src="./graphs/france-densite-communes-2019.png" alt="geolocation-college-prive-public-selon-ips" height="400"/>
-
-On constate une forte implentation des établissements privés dans les bassins de populations les plus denses alors qu'ils sont peu présents en zones rurales. Ceci à l'exception de la Bretagne et la Loire-Atlantique ou les établissements privés sont présents icompris en zones rurales. 
+On constate une forte implentation des établissements privés dans les bassins de populations les plus denses alors qu'ils sont peu présents en zones rurales. </br>
+La Bretagne et la Loire-Atlantique constituent des exceptions à ce constat. 
 
 
-<a href="https://crish1eev1.github.io/images/geolocation-ecole-prive-public-selon-ips_no-title.html" download="">
-  <img src="/images/myw3schoolsimage.jpg" alt="" width="104" height="142">
+
+#### Distribution public/privé des écoles par région selon IDS (année scolaire 2021-2022)
+<a href="https://crish1eev1.github.io/images/graphs/boxplot-ecole-ips-selon-region_no-title.html" download="">
+  <img src="./graphs/boxplot-ecole-ips-selon-region_no-title.png" alt="boxplot-ecole-ips-selon-region" width="1300">
+</a>
+Ce graph est ordonné par région ou l'écart d'IPS entre public et privé est le plus important.
+Les "boites" representent le profil de chaque série statistique. Plus la boite est longue, plus la série statistique comprend des valeurs dispérsées. Inversement, plus la boite est petite, plus les valeurs sont homogènes. Le trait visible à l'intérieur de chaque boite représente la médiane.  
+
+|                                    |   moyenne IPS privé |   moyenne IPS public |   différence |
+|------------------------------------|---------------------|----------------------|--------------|
+| guyane                             |               69.31 |               101.23 |        31.92 |
+| la réunion                         |               78.69 |               110.5  |        31.81 |
+| tom et collectivités territoriales |               79.48 |               108.35 |        28.87 |
+| ile-de-france                      |              106.77 |               134.58 |        27.8  |
+| martinique                         |               85.89 |               109.95 |        24.07 |
+| corse                              |               97.3  |               121.1  |        23.8  |
+| guadeloupe                         |               84.86 |               107.97 |        23.11 |
+| provence-alpes-côte d'azur         |              101.53 |               120.56 |        19.02 |
+| hauts-de-france                    |               94.4  |               112.02 |        17.62 |
+| grand est                          |              100.29 |               114.54 |        14.24 |
+| centre-val de loire                |              101.1  |               114.1  |        13    |
+| normandie                          |               99.72 |               108.75 |         9.03 |
+| bourgogne-franche-comté            |              101.2  |               110    |         8.81 |
+| nouvelle-aquitaine                 |              102.14 |               110.77 |         8.63 |
+| occitanie                          |              103.2  |               110.99 |         7.79 |
+| auvergne-rhône-alpes               |              105.42 |               112.37 |         6.95 |
+| pays de la loire                   |              101.21 |               107.85 |         6.64 |
+| bretagne                           |              103.05 |               107.07 |         4.02 |
+| mayotte                            |               69.57 |                 0    |         0    |
+
+On constate un très gros écart dans les territoires d'outre-mer, en ile de France, en Corse, en PACA ainsi que dans les hauts-de-france. Régions connues pour leur forte disparité sociale. A l'inverse, on constate un faible écart entre public et privé en Bretagne ou Pays de la Loire. 
+
+On verifiera par la suite si l'écart public/privé reste aussi important lorsqu'on se concentre sur les zones à forte de densité urbaine.
+
+#### Distribution public/privé des collèges par région selon IDS (année scolaire 2021-2022)
+<a href="https://crish1eev1.github.io/images/graphs/boxplot-college-ips-selon-region_no-title.html" download="">
+  <img src="./graphs/boxplot-college-ips-selon-region_no-title.png" alt="boxplot-college-ips-selon-region" width="1300">
 </a>
 
 
-###  2.2 Proportion des établissements publics/privés selon la région
+|                                    |   moyenne IPS privé |   moyenne IPS public |   différence |
+|------------------------------------|---------------------|----------------------|--------------|
+| guyane                             |               67.03 |               107.67 |        40.63 |
+| la réunion                         |               81.07 |               119.28 |        38.21 |
+| ile-de-france                      |              104.85 |               131    |        26.14 |
+| martinique                         |               86.69 |               110.63 |        23.94 |
+| corse                              |               98.96 |               119.3  |        20.34 |
+| provence-alpes-côte d'azur         |               99.1  |               118.2  |        19.1  |
+| hauts-de-france                    |               91.52 |               110.12 |        18.6  |
+| guadeloupe                         |               87.46 |               105.97 |        18.5  |
+| grand est                          |               97.62 |               113.05 |        15.42 |
+| centre-val de loire                |               99.78 |               113.17 |        13.39 |
+| normandie                          |               97.8  |               109.63 |        11.83 |
+| auvergne-rhône-alpes               |              103.62 |               113.8  |        10.18 |
+| pays de la loire                   |              102.16 |               110.72 |         8.56 |
+| occitanie                          |              102.75 |               111.2  |         8.45 |
+| nouvelle-aquitaine                 |              102.67 |               110.94 |         8.27 |
+| bourgogne-franche-comté            |              100.56 |               106.43 |         5.87 |
+| bretagne                           |              104.3  |               108.04 |         3.73 |
+| tom et collectivités territoriales |               83.32 |                 0    |         0    |
+| mayotte                            |               69.81 |                 0    |         0    |
 
 
 ## 3. Brevet

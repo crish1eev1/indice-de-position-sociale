@@ -47,8 +47,8 @@
 </table>   
 
 Le code permettant cette analyse de données est disponible sur github:
-- <a href="https://github.com/crish1eev1/public-private-distribution-french-schools/blob/main/data-analysis.ipynb">Collecte et structuration de données</a>
-- <a href="https://github.com/crish1eev1/public-private-distribution-french-schools/blob/main/data-analysis.ipynb">Analyse et visualisation de données</a>
+- <a href="https://github.com/crish1eev1/public-private-distribution-french-schools/blob/main/data-processing.ipynb">Collecte et structuration des données</a>
+- <a href="https://github.com/crish1eev1/public-private-distribution-french-schools/blob/main/data-analysis.ipynb">Analyse et visualisation des données</a>
 <br></br>
 
 ## 1. Répartition public/privé des écoles françaises selon l'Indice de Position Sociale (IPS) 
@@ -60,7 +60,7 @@ L'indice de position sociale (IPS) des élèves est un indice sans dimension com
 Note: les jeux de données fournissent un IPS par établissement pour les écoles et les collèges. Les graphiques et tableaux de la section 1 de ce document sont établis par établissement, sans pondération par le nombre d'élèves scolarisés dans chaque établissement.
 <br></br>
 
-###  1.1 Distribution public/privé des écoles et collèges selon IPS (année scolaire 2021-2022)
+###  1.1 Répartition public/privé des écoles et collèges selon IPS (année scolaire 2021-2022)
 <a href="https://crish1eev1.github.io/images/graphs/violin-distribution-prive-public-selon-ips.html">
   <img src="./graphs/violin-distribution-prive-public-selon-ips_no-title.png" alt="violin-distribution-prive-public-selon-ips" width="700">
 </a>
@@ -76,11 +76,11 @@ Note: les jeux de données fournissent un IPS par établissement pour les école
 | Collèges privés    |          1659 |      114.2 |       16.0  |        66.0 |       154.9 |       112.8 |
 
 
-On constate une disparité importante entre établissements publics et privés avec un IPS moyen supérieur dans le privé. Visuellement, on constate aussi des queues de distribution à l'allure inversée. En effet, la queue de distribution des établissements publics s'affine rapidement lorsque l'IPS augmente tandis qu'elle reste épaisse lorsque l'IPS baisse. Et inversement pour le privé.
+On constate une disparité importante entre établissements publics et privés avec un IPS moyen supérieur dans le privé. Visuellement, on constate aussi des queues de distribution à l'allure inversée. En effet, la queue de distribution des établissements publics s'affine rapidement lorsque l'IPS augmente tandis qu'elle reste épaisse lorsque l'IPS baisse. Et inversement pour le privé. 
 <br></br>
 
 ###  1.2 Répartition public/privé des établissments selon 7 tranches d'IPS (année scolaire 2021-2022)
-Dans cette sous-partie, nous diviserons les établissements scolaires en 7 groupes en fonction de leur IPS.  
+Dans cette sous-partie, nous diviserons les établissements scolaires en 7 groupes en fonction de leur IPS. Ceci pour les écoles puis pour les collèges.  
 #### Répartition public/privé des écoles primaires selon IPS (en % du nombre d'établissements)
 <a href="#">
 <img src="./graphs/ecole_repartition-prive-public-selon-ips_no-title.png" alt="ecole_repartition-prive-public-selon-ips" width="700"/>
@@ -132,8 +132,8 @@ Cliquez sur les graphs si vous souhaitez naviguer vous même sur la carte.
 
 <font size ="1"> (cliquez sur l'image pour accéder à sa version dynamique) </font>
 
-On constate une forte implantation des établissements privés dans les bassins de populations les plus denses alors qu'ils sont peu présents en zones rurales. </br>
-La Bretagne et la Loire-Atlantique constituent des exceptions à ce constat. 
+On obersve une forte implantation des établissements privés dans les bassins de populations les plus denses alors qu'ils sont peu présents en zones rurales (cf <a href="https://www.populationdata.net/wp-content/uploads/2017/01/france-densite-communes.png">carte de densité de population</a> en France métropolitaine). </br>
+La Bretagne et les Pays de la Loire constituent des exceptions à ce constat avec une présence d'établissements privés très établis, y compris en zones rurales. 
 
 
 
@@ -144,8 +144,8 @@ La Bretagne et la Loire-Atlantique constituent des exceptions à ce constat.
 
 <font size ="1"> (cliquez sur l'image pour accéder à sa version dynamique) </font>
 
-Ce graphique est classé par région en commençant par celle ou l'écart d'IPS entre public et privé est le plus important.
-Les "boîtes" représentent le profil de chaque série statistique. Plus une boîte est longue, plus la série statistique en question comprend des valeurs dispersées. Inversement, plus la boîte est courte, plus les valeurs sont homogènes. Le trait visible à l'intérieur de chaque boîte représente la médiane de la série.  
+Ce graphique est segmenté par région en allant de celle ou l'écart d'IPS entre public et privé est le plus important (à gauche) pour finir par celle ou l'écart est le moins important (à droite, en sachant que mayotte ).
+Les "boîtes" représentent le profil de chaque série statistique. Plus une boîte est longue, plus la série statistique en question comprend des valeurs dispersées. Inversement, plus la boîte est courte, plus les valeurs sont homogènes. Le trait visible à l'intérieur de chaque boîte représente la médiane de la série. 
 
 |                                    |  Médiane IPS public |   Médiane IPS privé  |   différence |
 |------------------------------------|---------------------|----------------------|--------------|
@@ -207,12 +207,17 @@ On retrouve presque le même classement pour les collèges.
 ###  1.4 Répartition public/privé des établissments selon IPS par densité de population (année scolaire 2021-2022)
 
 Nous avons observé (visuellement) que les établissements privés étaient davantage concentrés dans les agglomérations, à l'exception notable de la Bretagne et des Pays de la Loire.
-Nous avons aussi constaté que ces régions font partie de celles où l'écart d’IPS entre public et privé est le plus faible. Il semble donc intéressant de segmenter nos observations selon la densité de la zone urbaine observée afin de comprendre si ce faible écart d’IPS se confirme aussi en zone urbaine.
+Nous avons aussi constaté que ces deux régions font partie de celles où l'écart d’IPS entre public et privé est le plus faible. Il semble donc intéressant de segmenter nos observations selon la densité de la commune de l'établissement observé. De cette manière, nous pourrons déterminer si le faible écart d'IPS dans ces deux régions constitue une exception régionale ou si l'écart est généralement plus faible en zone rurale et que ce facteur influe de manière plus importante sur ces régions de par la présence importante des établissements privés en zones rurales.
  
-La segmentation écoles/collèges ayant peu d'intérêt (les deux groupes se comportant de assez manière similaires jusqu'ici), nous allons regrouper les écoles et collèges en un seul et même groupe.
+La segmentation écoles/collèges n’ayant révélé que peu de différences jusqu’à présent, nous regrouperons cette fois les écoles et collèges afin de maximiser le nombre d’observations par région. 
 
 
+#### Distribution public/privé des établissements selon densité de population (année scolaire 2021-2022)
+<a href="https://crish1eev1.github.io/images/graphs/boxplot-etablissement-ips-selon-zone-rurale.html" download="">
+  <img src="./graphs/boxplot-etablissement-ips-selon-zone-rurale_no-title.png" alt="boxplot-etablissement-ips-selon-zone-rurale" width="700">
+</a>
+
+<font size ="1"> (cliquez sur l'image pour accéder à sa version dynamique) </font>
 
 
-
-## 2. Brevet
+#### Distribution public/privé des établissements en zone rurale par région (année scolaire 2021-2022)

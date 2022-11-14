@@ -65,8 +65,6 @@ Note: les jeux de données fournissent un IPS par établissement pour les école
   <img src="./graphs/violin-distribution-prive-public-selon-ips_no-title.png" alt="violin-distribution-prive-public-selon-ips" width="700">
 </a>
 
-<font size ="1"> (cliquez sur l'image pour accéder à sa version dynamique) </font>
-
 
 |                    |   Nombre      |  IPS moyen |  Ecart-type |   Valeur minimum       |   Valeur Maximum       |   Mediane   |
 |--------------------|---------------|------------|-------------|------------------------|------------------------|-------------|
@@ -82,9 +80,9 @@ On constate une disparité importante entre établissements publics et privés a
 ###  1.2 Répartition public/privé des établissments selon 7 tranches d'IPS
 Dans cette sous-partie, nous diviserons les établissements scolaires en 7 groupes en fonction de leur IPS. Ceci pour les écoles puis pour les collèges.  
 #### Répartition public/privé des écoles primaires selon IPS (en % du nombre d'établissements)
-<a href="#">
+
 <img src="./graphs/ecole_repartition-prive-public-selon-ips_no-title.png" alt="ecole_repartition-prive-public-selon-ips" width="700"/>
-</a>
+
 
 - Parmi les écoles avec un IPS inférieur à 90, seules 3,2% sont privées.
 - Parmi celles avec un IPS supérieur à 140, 60,3% sont privées.
@@ -99,9 +97,8 @@ Dans cette sous-partie, nous diviserons les établissements scolaires en 7 group
 
 
 #### Répartition public/privé des collèges selon IPS (en % du nombre d'établissements)
-<a href="#">
+
 <img src="./graphs/college_repartition-prive-public-selon-ips_no-title.png" alt="college_repartition-prive-public-selon-ips" width="700"/>
-</a>
 
 - Parmi les collèges avec un IPS inférieur à 90, 5,7% sont privés.
 - Parmi ceux avec un IPS supérieur à 140, 77,9% sont privés.

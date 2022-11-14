@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>rapport.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="etude-de-la-r%C3%A9partition-publicpriv%C3%A9-des-%C3%A9tablissements-scolaires-fran%C3%A7ais">Etude de la répartition public/privé des établissements scolaires français</h1>
+<h2 id="sources-utilis%C3%A9es">Sources utilisées</h2>
+<table>
+    <tr>
+        <th><p style="text-align:left">TITRE</p></th>
+        <th><p style="text-align:left">SOURCE</p></th>
+        <th><p style="text-align:left">LIEN</p></th>
+        <th><p style="text-align:left">MAJ</p></th>
+    <tr>
+    <tr>
+        <td><p style="text-align:left">Indices de position sociale dans les collèges de France métropolitaine et DROM<br> 
+        </p></td>
+        <td><p style="text-align:left">data.education.gouv.fr</p></td>
+        <td><p style="text-align:left"><a href="https://data.education.gouv.fr/explore/dataset/fr-en-ips_colleges/table/?disjunctive.rentree_scolaire&disjunctive.academie&disjunctive.code_du_departement&disjunctive.departement&disjunctive.uai&disjunctive.code_insee_de_la_commune&disjunctive.nom_de_la_commune&disjunctive.secteur", target="_blank">Indices de position sociale dans les collèges de France métropolitaine et DROM</a></p></td>
+        <td><p style="text-align:left">October, 2022</p></td>
+    </tr>
+    <tr>
+        <td><p style="text-align:left">Indices de position sociale dans les écoles de France métropolitaine et DROM<br>
+        </p></td>
+        <td><p style="text-align:left">data.education.gouv.fr</p></td>
+        <td><p style="text-align:left"><a href="https://data.education.gouv.fr/explore/dataset/fr-en-ips_ecoles/information/?disjunctive.academie&disjunctive.code_du_departement&disjunctive.departement&disjunctive.uai&disjunctive.code_insee_de_la_commune&disjunctive.nom_de_la_commune&disjunctive.secteur", target="_blank">Indices de position sociale dans les écoles de France métropolitaine et DROM</a></p></td>
+        <td><p style="text-align:left">October, 2022</p></td>
+    </tr>
+    <tr>
+        <td><p style="text-align:left">Adresse et géolocalisation des établissements d'enseignement du premier et second degrés<br> 
+        </p></td>
+        <td><p style="text-align:left">data.education.gouv.fr</p></td>
+        <td><p style="text-align:left"><a href="https://data.education.gouv.fr/explore/dataset/fr-en-adresse-et-geolocalisation-etablissements-premier-et-second-degre/table/?disjunctive.nature_uai&disjunctive.nature_uai_libe&disjunctive.code_departement&disjunctive.code_region&disjunctive.code_academie&disjunctive.secteur_prive_code_type_contrat&disjunctive.secteur_prive_libelle_type_contrat&disjunctive.code_ministere&disjunctive.libelle_ministere", target="_blank">Adresse et géolocalisation des établissements d'enseignement du premier et second degrés </a></p></td>
+        <td><p style="text-align:left">October, 2022</p></td>
+    </tr>
+    <tr>
+        <td><p style="text-align:left">Typologie des communues (urbain / rural)<br> 
+        </p></td>
+        <td><p style="text-align:left">observatoire-des-territoires.gouv.fr</p></td>
+        <td><p style="text-align:left"><a href="https://www.observatoire-des-territoires.gouv.fr/typologie-urbain-rural", target="_blank">Typologie des communues (urbain / rural) </a></p></td>
+        <td><p style="text-align:left">2021</p></td>
+    </tr>
+    <tr>
+        <td><p style="text-align:left">Diplôme national du brevet par établissement<br>
+        </p></td>
+        <td><p style="text-align:left">data.education.gouv.fr</p></td>
+        <td><p style="text-align:left"><a href="https://data.education.gouv.fr/explore/dataset/fr-en-dnb-par-etablissement/information/?disjunctive.session&disjunctive.numero_d_etablissement&disjunctive.denomination_principale&disjunctive.secteur_d_enseignement&disjunctive.commune_et_arrondissement&disjunctive.commune_et_arrondissement_lib_l&disjunctive.departement&disjunctive.departement_libelle&disjunctive.academie&disjunctive.academie_libelle&disjunctive.region&disjunctive.region_libelle", target="_blank">Diplôme national du brevet par établissement</a></p></td>
+        <td><p style="text-align:left">June, 2022</p></td>
+    </tr>
+</table>   
+<p>Le code permettant l'analyse de données ci-dessous est disponible sur github:</p>
+<ul>
+<li><a href="https://github.com/crish1eev1/public-private-distribution-french-schools/blob/main/data-processing.ipynb">Collecte et structuration des données</a></li>
+<li><a href="https://github.com/crish1eev1/public-private-distribution-french-schools/blob/main/data-analysis.ipynb">Analyse et visualisation des données</a>
+<br></br></li>
+</ul>
+<h2 id="1-r%C3%A9partition-publicpriv%C3%A9-des-%C3%A9coles-fran%C3%A7aises-selon-lindice-de-position-sociale-ips-selon-des-donn%C3%A9es-de-lann%C3%A9e-scolaire-2021-2022">1. Répartition public/privé des écoles françaises selon l'Indice de Position Sociale (IPS) selon des données de l'année scolaire 2021-2022</h2>
+<h4 id="d%C3%A9finition-de-lindice-de-position-sociale-selon-wikipedia">Définition de l'Indice de Position Sociale selon wikipedia</h4>
+<blockquote>
+<p>L'indice de position sociale des élèves (IPS) est un outil de mesure quantitatif de la situation sociale des élèves face aux apprentissages dans les établissements scolaires français. <strong>Plus l'indice est élevé, plus l'élève évolue dans un contexte familial favorable aux apprentissages. Cet indice est construit à partir des professions et catégories socioprofessionnelles (PCS) des représentants légaux des élèves</strong>.
+Il est utilisé pour décrire les populations scolaires (milieu social plus ou moins favorable et mixité sociale) dans les écoles, collèges et lycées mais aussi pour classer les établissements scolaires et leur attribuer des moyens en conséquence.
+L'indice de position sociale (IPS) des élèves est un indice sans dimension compris entre 38 et 1791. Plus cet indice est élevé, plus le contexte familial de l'élève est favorable à sa réussite scolaire.</p>
+</blockquote>
+<p>Note: les jeux de données fournissent un IPS par établissement pour les écoles et les collèges. Les graphiques et tableaux figurant dans la section 1 de ce document sont établis par établissement scolaire, sans pondération par le nombre d'élèves scolarisés dans chaque établissement.
+<br></br></p>
+<h3 id="11-r%C3%A9partition-publicpriv%C3%A9-des-%C3%A9coles-et-coll%C3%A8ges-de-france-selon-ips">1.1 Répartition public/privé des écoles et collèges de France selon IPS</h3>
+<iframe src="https://crish1eev1.github.io/images/graphs/violin-distribution-prive-public-selon-ips.html" style="border:none;" title="description" width="1000" height="650"> </iframe> 
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Nombre</th>
+<th>IPS moyen</th>
+<th>Ecart-type</th>
+<th>Valeur minimum</th>
+<th>Valeur Maximum</th>
+<th>Mediane</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ecoles publiques</td>
+<td>27549</td>
+<td>101.2</td>
+<td>15.7</td>
+<td>49.6</td>
+<td>155.6</td>
+<td>101.9</td>
+</tr>
+<tr>
+<td>Ecoles privées</td>
+<td>4542</td>
+<td>112.2</td>
+<td>15.1</td>
+<td>56.8</td>
+<td>155.4</td>
+<td>110.4</td>
+</tr>
+<tr>
+<td>Collèges publics</td>
+<td>5303</td>
+<td>99.9</td>
+<td>15.3</td>
+<td>51.3</td>
+<td>157.6</td>
+<td>100.5</td>
+</tr>
+<tr>
+<td>Collèges privés</td>
+<td>1659</td>
+<td>114.2</td>
+<td>16.0</td>
+<td>66.0</td>
+<td>154.9</td>
+<td>112.8</td>
+</tr>
+</tbody>
+</table>
+<p>On constate une disparité importante entre établissements publics et privés avec un IPS moyen supérieur dans le privé. Visuellement, on constate aussi des queues de distribution à l'allure inversée. En effet, la queue de distribution des établissements publics s'affine rapidement lorsque l'IPS augmente tandis qu'elle reste épaisse lorsque l'IPS baisse. Et inversement pour le privé.
+<br></br></p>
+<h3 id="12-r%C3%A9partition-publicpriv%C3%A9-des-%C3%A9tablissments-selon-7-tranches-dips">1.2 Répartition public/privé des établissments selon 7 tranches d'IPS</h3>
+<p>Dans cette sous-partie, nous diviserons les établissements scolaires en 7 groupes en fonction de leur IPS. Ceci pour les écoles puis pour les collèges.</p>
+<h4 id="r%C3%A9partition-publicpriv%C3%A9-des-%C3%A9coles-primaires-selon-ips-en--du-nombre-d%C3%A9tablissements">Répartition public/privé des écoles primaires selon IPS (en % du nombre d'établissements)</h4>
+<img src="./graphs/ecole_repartition-prive-public-selon-ips_no-title.png" alt="ecole_repartition-prive-public-selon-ips" width="700"/>
+<ul>
+<li>Parmi les écoles avec un IPS inférieur à 90, seules 3,2% sont privées.</li>
+<li>Parmi celles avec un IPS supérieur à 140, 60,3% sont privées.</li>
+</ul>
+<h4 id="r%C3%A9partition-publicpriv%C3%A9-des-%C3%A9coles-primaires-selon-ips-en-valeur-absolue-du-nombre-d%C3%A9tablissements">Répartition public/privé des écoles primaires selon IPS (en valeur absolue du nombre d'établissements)</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Moins de 90</th>
+<th>90 à 100</th>
+<th>100 à 110</th>
+<th>110 à 120</th>
+<th>120 à 130</th>
+<th>130 à 140</th>
+<th>Plus de 140</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>écoles publiques</td>
+<td>6069</td>
+<td>6276</td>
+<td>7276</td>
+<td>4928</td>
+<td>2134</td>
+<td>708</td>
+<td>158</td>
+</tr>
+<tr>
+<td>écoles privées</td>
+<td>202</td>
+<td>763</td>
+<td>1256</td>
+<td>1040</td>
+<td>653</td>
+<td>388</td>
+<td>240</td>
+</tr>
+</tbody>
+</table>
+<h4 id="r%C3%A9partition-publicpriv%C3%A9-des-coll%C3%A8ges-selon-ips-en--du-nombre-d%C3%A9tablissements">Répartition public/privé des collèges selon IPS (en % du nombre d'établissements)</h4>
+<img src="./graphs/college_repartition-prive-public-selon-ips_no-title.png" alt="college_repartition-prive-public-selon-ips" width="700"/>
+<ul>
+<li>Parmi les collèges avec un IPS inférieur à 90, 5,7% sont privés.</li>
+<li>Parmi ceux avec un IPS supérieur à 140, 77,9% sont privés.</li>
+</ul>
+<h4 id="r%C3%A9partition-publicpriv%C3%A9-des-coll%C3%A8ges-selon-ips-en-valeur-absolue-du-nombre-d%C3%A9tablissements">Répartition public/privé des collèges selon IPS (en valeur absolue du nombre d'établissements)</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Moins de 90</th>
+<th>90 à 100</th>
+<th>100 à 110</th>
+<th>110 à 120</th>
+<th>120 à 130</th>
+<th>130 à 140</th>
+<th>Plus de 140</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>collèges publics</td>
+<td>1268</td>
+<td>1291</td>
+<td>1468</td>
+<td>812</td>
+<td>325</td>
+<td>105</td>
+<td>34</td>
+</tr>
+<tr>
+<td>collèges privés</td>
+<td>76</td>
+<td>245</td>
+<td>396</td>
+<td>383</td>
+<td>270</td>
+<td>169</td>
+<td>120</td>
+</tr>
+</tbody>
+</table>
+</br>
+<h3 id="13-r%C3%A9partition-publicpriv%C3%A9-des-%C3%A9tablissments-selon-ips-et-par-r%C3%A9gion">1.3 Répartition public/privé des établissments selon IPS et par région</h3>
+<p>Avant d'anlyser les écarts entre régions dans le détail, voici un aperçu de la répartition géographique globale en France métropolitaine.</br>
+Cliquez sur les graphs si vous souhaitez naviguer vous même sur la carte.</p>
+<h4 id="r%C3%A9partition-g%C3%A9ographique-des-%C3%A9coles-publiquespriv%C3%A9es">Répartition géographique des écoles publiques/privées</h4>
+<a href="https://crish1eev1.github.io/images/graphs/geolocation-ecole-prive-public-selon-ips.html" download="">
+  <img src="./graphs/geolocation-ecole-prive-public-selon-ips_no-title.png" alt="geolocation-ecole-prive-public-selon-ips" width="700">
+</a>
+<p><font size ="1"> (cliquez sur l'image pour accéder à sa version dynamique) </font></p>
+<h4 id="r%C3%A9partition-g%C3%A9ographique-des-coll%C3%A8ges-publicspriv%C3%A9s">Répartition géographique des collèges publics/privés</h4>
+<a href="https://crish1eev1.github.io/images/graphs/geolocation-college-prive-public-selon-ips.html" download="">
+  <img src="./graphs/geolocation-college-prive-public-selon-ips_no-title.png" alt="geolocation-college-prive-public-selon-ips" width="700">
+</a>
+<p><font size ="1"> (cliquez sur l'image pour accéder à sa version dynamique) </font></p>
+<p>On obersve une forte implantation des établissements privés dans les bassins de populations les plus denses alors qu'ils sont peu présents en zones rurales (cf <a href="https://www.populationdata.net/wp-content/uploads/2017/01/france-densite-communes.png">carte de densité de population</a> en France métropolitaine). </br>
+La Bretagne et les Pays de la Loire constituent des exceptions à la règle avec une présence d'établissements privés très établis, y compris en zones rurales.</p>
+<h4 id="distribution-publicpriv%C3%A9-des-%C3%A9coles-par-r%C3%A9gion-selon-ips">Distribution public/privé des écoles par région selon IPS</h4>
+<iframe src="https://crish1eev1.github.io/images/graphs/boxplot-ecole-ips-selon-region_no-title.html" style="border:none;" title="description" width="1400" height="450"> </iframe> 
+<p>Ce type de représentation permet de figurer rapidement du profil essentiel d'une série statistique. Une &quot;boîte&quot; contient 50% des valeurs de sa série en allant du premier quartile au troisième quartile. Le trait visible à l'intérieur de chaque boîte représente la médiane de la série.</br>
+Ce graphique est segmenté par région en allant de celle ou l'écart d'IPS entre public et privé est le plus important (à gauche) pour finir par celle ou l'écart est le moins important (à droite). On notera que notre dataset ne contient pas les établissements privés de Mayotte.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Médiane IPS public</th>
+<th>Médiane IPS privé</th>
+<th>différence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>guyane</td>
+<td>66.2</td>
+<td>108.4</td>
+<td>42.2</td>
+</tr>
+<tr>
+<td>la réunion</td>
+<td>76.05</td>
+<td>114.45</td>
+<td>38.4</td>
+</tr>
+<tr>
+<td>tom et collectivités territoriales</td>
+<td>78.1</td>
+<td>108.35</td>
+<td>30.25</td>
+</tr>
+<tr>
+<td>ile-de-france</td>
+<td>107.9</td>
+<td>137.1</td>
+<td>29.2</td>
+</tr>
+<tr>
+<td>martinique</td>
+<td>84.5</td>
+<td>112.7</td>
+<td>28.2</td>
+</tr>
+<tr>
+<td>corse</td>
+<td>98.15</td>
+<td>122</td>
+<td>23.85</td>
+</tr>
+<tr>
+<td>guadeloupe</td>
+<td>83.8</td>
+<td>104.8</td>
+<td>21</td>
+</tr>
+<tr>
+<td>hauts-de-france</td>
+<td>94.2</td>
+<td>112</td>
+<td>17.8</td>
+</tr>
+<tr>
+<td>provence-alpes-côte d'azur</td>
+<td>103.5</td>
+<td>121</td>
+<td>17.5</td>
+</tr>
+<tr>
+<td>centre-val de loire</td>
+<td>101.9</td>
+<td>115.1</td>
+<td>13.2</td>
+</tr>
+<tr>
+<td>grand est</td>
+<td>100.7</td>
+<td>113.85</td>
+<td>13.15</td>
+</tr>
+<tr>
+<td>bourgogne-franche-comté</td>
+<td>101.9</td>
+<td>109.6</td>
+<td>7.7</td>
+</tr>
+<tr>
+<td>normandie</td>
+<td>100</td>
+<td>107.05</td>
+<td>7.05</td>
+</tr>
+<tr>
+<td>nouvelle-aquitaine</td>
+<td>102.2</td>
+<td>108.8</td>
+<td>6.6</td>
+</tr>
+<tr>
+<td>occitanie</td>
+<td>104.2</td>
+<td>109.75</td>
+<td>5.55</td>
+</tr>
+<tr>
+<td>pays de la loire</td>
+<td>101.3</td>
+<td>106</td>
+<td>4.7</td>
+</tr>
+<tr>
+<td>auvergne-rhône-alpes</td>
+<td>106.3</td>
+<td>111</td>
+<td>4.7</td>
+</tr>
+<tr>
+<td>bretagne</td>
+<td>103.2</td>
+<td>105.5</td>
+<td>2.3</td>
+</tr>
+<tr>
+<td>mayotte</td>
+<td>67.9</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>On constate un écart très important entre IPS dans le public et le privé dans les territoires d'outre-mer, en Ile de France, en Corse, en PACA ainsi que dans les Hauts-de-France. Des régions connues pour leur forte disparité sociale. A l'inverse, on constate un faible écart entre public et privé en Bretagne ou Pays de la Loire. Nous avons observé précédemment que ces deux régions avaient comme particularité de comporter beaucoup d'écoles privées en zones rurales.</p>
+<h4 id="distribution-publicpriv%C3%A9-des-coll%C3%A8ges-par-r%C3%A9gion-selon-ips">Distribution public/privé des collèges par région selon IPS</h4>
+<iframe src="https://crish1eev1.github.io/images/graphs/boxplot-college-ips-selon-region_no-title.html" style="border:none;" title="description" width="1400" height="450"> </iframe> 
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Médiane IPS public</th>
+<th>Médiane IPS privé</th>
+<th>différence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>guyane</td>
+<td>66.7</td>
+<td>108.55</td>
+<td>41.85</td>
+</tr>
+<tr>
+<td>la réunion</td>
+<td>79.9</td>
+<td>118.6</td>
+<td>38.7</td>
+</tr>
+<tr>
+<td>ile-de-france</td>
+<td>104.7</td>
+<td>133.5</td>
+<td>28.8</td>
+</tr>
+<tr>
+<td>martinique</td>
+<td>86.5</td>
+<td>113</td>
+<td>26.5</td>
+</tr>
+<tr>
+<td>corse</td>
+<td>98.9</td>
+<td>119.3</td>
+<td>20.4</td>
+</tr>
+<tr>
+<td>provence-alpes-côte d'azur</td>
+<td>101.1</td>
+<td>120.5</td>
+<td>19.4</td>
+</tr>
+<tr>
+<td>hauts-de-france</td>
+<td>91.5</td>
+<td>108.85</td>
+<td>17.35</td>
+</tr>
+<tr>
+<td>guadeloupe</td>
+<td>87.1</td>
+<td>103.9</td>
+<td>16.8</td>
+</tr>
+<tr>
+<td>grand est</td>
+<td>98.6</td>
+<td>112.7</td>
+<td>14.1</td>
+</tr>
+<tr>
+<td>centre-val de loire</td>
+<td>100.1</td>
+<td>112.85</td>
+<td>12.75</td>
+</tr>
+<tr>
+<td>normandie</td>
+<td>97.4</td>
+<td>110.1</td>
+<td>12.7</td>
+</tr>
+<tr>
+<td>auvergne-rhône-alpes</td>
+<td>104</td>
+<td>113.5</td>
+<td>9.5</td>
+</tr>
+<tr>
+<td>occitanie</td>
+<td>103.8</td>
+<td>110.55</td>
+<td>6.75</td>
+</tr>
+<tr>
+<td>pays de la loire</td>
+<td>101.25</td>
+<td>107.7</td>
+<td>6.45</td>
+</tr>
+<tr>
+<td>nouvelle-aquitaine</td>
+<td>102.6</td>
+<td>109</td>
+<td>6.4</td>
+</tr>
+<tr>
+<td>bourgogne-franche-comté</td>
+<td>101.4</td>
+<td>106.5</td>
+<td>5.1</td>
+</tr>
+<tr>
+<td>bretagne</td>
+<td>104.3</td>
+<td>107.15</td>
+<td>2.85</td>
+</tr>
+<tr>
+<td>tom et collectivités territoriales</td>
+<td>78.6</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>mayotte</td>
+<td>68.15</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>On retrouve quasiement le même classement pour les collèges que pour les écoles.</p>
+<h3 id="14-r%C3%A9partition-publicpriv%C3%A9-des-%C3%A9tablissments-selon-ips-par-densit%C3%A9-de-population">1.4 Répartition public/privé des établissments selon IPS par densité de population</h3>
+<p>Nous avons observé que les établissements privés étaient davantage concentrés dans les agglomérations, à l'exception notable de la Bretagne et des Pays de la Loire.
+Nous avons aussi constaté que ces deux régions font partie de celles où l'écart d’IPS entre public et privé est le plus faible. Il semble donc intéressant de segmenter nos observations selon la typologie de la commune (zone rurale ou zone urbaine) observée. De cette manière, nous pourrons déterminer si le faible écart d'IPS dans ces deux régions découle de l'implantation plus importante des établissements privés en zones rurales dans ces régions.</p>
+<p>La segmentation écoles/collèges n’ayant révélé que peu de différences jusqu’à présent, nous regrouperons cette fois les écoles et collèges afin de maximiser le nombre d’observations par région.</p>
+<h4 id="distribution-publicpriv%C3%A9-des-%C3%A9tablissements-selon-densit%C3%A9-de-population">Distribution public/privé des établissements selon densité de population</h4>
+
+<iframe src="https://crish1eev1.github.io/images/graphs/boxplot-etablissement-ips-selon-zone-rurale_no-title.html" style="border:none;" title="description" width="800" height="450"> </iframe> 
+<p>En se limitant aux établissements de zones rurales, on constate qu'il n'y a plus qu'un faible écart d'IPS médian en faveur des établissements privés (100.5 versus 101.7). </br>
+Cet écart bondit pour les établissements scolaires de zones urbaines (102.8 versus 117.2).</p>
+<h4 id="distribution-publicpriv%C3%A9-des-%C3%A9tablissements-en-zone-ruale-par-r%C3%A9gion">Distribution public/privé des établissements en zone ruale par région</h4>
+<iframe src="https://crish1eev1.github.io/images/graphs/boxplot-etablissements-rural-ips-selon-region_no-title.html" style="border:none;" title="description" width="1400" height="450"> </iframe> 
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Médiane IPS public</th>
+<th>Médiane IPS privé</th>
+<th>différence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>guyane</td>
+<td>57.7</td>
+<td>87.9</td>
+<td>30.2</td>
+</tr>
+<tr>
+<td>martinique</td>
+<td>86.45</td>
+<td>103</td>
+<td>16.55</td>
+</tr>
+<tr>
+<td>hauts-de-france</td>
+<td>94.3</td>
+<td>105.5</td>
+<td>11.2</td>
+</tr>
+<tr>
+<td>guadeloupe</td>
+<td>85.7</td>
+<td>95.7</td>
+<td>10</td>
+</tr>
+<tr>
+<td>la réunion</td>
+<td>71.3</td>
+<td>78.1</td>
+<td>6.8</td>
+</tr>
+<tr>
+<td>provence-alpes-côte d'azur</td>
+<td>105.7</td>
+<td>112.2</td>
+<td>6.5</td>
+</tr>
+<tr>
+<td>centre-val de loire</td>
+<td>99.1</td>
+<td>104.5</td>
+<td>5.4</td>
+</tr>
+<tr>
+<td>pays de la loire</td>
+<td>96.8</td>
+<td>101.3</td>
+<td>4.5</td>
+</tr>
+<tr>
+<td>grand est</td>
+<td>100</td>
+<td>103.4</td>
+<td>3.4</td>
+</tr>
+<tr>
+<td>normandie</td>
+<td>97.85</td>
+<td>100.6</td>
+<td>2.75</td>
+</tr>
+<tr>
+<td>nouvelle-aquitaine</td>
+<td>99.5</td>
+<td>100.2</td>
+<td>0.7</td>
+</tr>
+<tr>
+<td>bourgogne-franche-comté</td>
+<td>100.7</td>
+<td>101.05</td>
+<td>0.35</td>
+</tr>
+<tr>
+<td>corse</td>
+<td>94.3</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>tom et collectivités territoriales</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ile-de-france</td>
+<td>104.3</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>mayotte</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>occitanie</td>
+<td>103.2</td>
+<td>103</td>
+<td>-0.2</td>
+</tr>
+<tr>
+<td>bretagne</td>
+<td>100.6</td>
+<td>100.3</td>
+<td>-0.3</td>
+</tr>
+<tr>
+<td>auvergne-rhône-alpes</td>
+<td>106.3</td>
+<td>104.6</td>
+<td>-1.7</td>
+</tr>
+</tbody>
+</table>
+<p>En zone rurale, seules 4 régions conservent un écart d'IPS médian supérieur à 10 entre privé et public. On y retrouve notamment certains territoires d'outre-mer ainsi que les Hauts-de-France.</p>
+<h4 id="distribution-publicpriv%C3%A9-des-%C3%A9tablissements-en-zone-urbaine-par-r%C3%A9gion-ann%C3%A9e-scolaire-2021-2022">Distribution public/privé des établissements en zone urbaine par région (année scolaire 2021-2022)</h4>
+<iframe src="https://crish1eev1.github.io/images/graphs/boxplot-etablissements-urbain-ips-selon-region_no-title.html" style="border:none;" title="description" width="1400" height="450"> </iframe> 
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Médiane IPS public</th>
+<th>Médiane IPS privé</th>
+<th>différence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>guyane</td>
+<td>71.4</td>
+<td>112.55</td>
+<td>41.15</td>
+</tr>
+<tr>
+<td>la réunion</td>
+<td>77.1</td>
+<td>116.6</td>
+<td>39.5</td>
+</tr>
+<tr>
+<td>martinique</td>
+<td>84.25</td>
+<td>113.05</td>
+<td>28.8</td>
+</tr>
+<tr>
+<td>ile-de-france</td>
+<td>107.3</td>
+<td>135.7</td>
+<td>28.4</td>
+</tr>
+<tr>
+<td>guadeloupe</td>
+<td>84.7</td>
+<td>106.3</td>
+<td>21.6</td>
+</tr>
+<tr>
+<td>hauts-de-france</td>
+<td>93</td>
+<td>112.8</td>
+<td>19.8</td>
+</tr>
+<tr>
+<td>provence-alpes-côte d'azur</td>
+<td>101.8</td>
+<td>121.4</td>
+<td>19.6</td>
+</tr>
+<tr>
+<td>corse</td>
+<td>102.6</td>
+<td>122</td>
+<td>19.4</td>
+</tr>
+<tr>
+<td>grand est</td>
+<td>100.9</td>
+<td>115.95</td>
+<td>15.05</td>
+</tr>
+<tr>
+<td>centre-val de loire</td>
+<td>105</td>
+<td>118.65</td>
+<td>13.65</td>
+</tr>
+<tr>
+<td>normandie</td>
+<td>102</td>
+<td>113.9</td>
+<td>11.9</td>
+</tr>
+<tr>
+<td>nouvelle-aquitaine</td>
+<td>106.2</td>
+<td>117.5</td>
+<td>11.3</td>
+</tr>
+<tr>
+<td>bourgogne-franche-comté</td>
+<td>103.3</td>
+<td>113.85</td>
+<td>10.55</td>
+</tr>
+<tr>
+<td>auvergne-rhône-alpes</td>
+<td>105.55</td>
+<td>115.9</td>
+<td>10.35</td>
+</tr>
+<tr>
+<td>occitanie</td>
+<td>104.9</td>
+<td>114.3</td>
+<td>9.4</td>
+</tr>
+<tr>
+<td>pays de la loire</td>
+<td>106.55</td>
+<td>114.4</td>
+<td>7.85</td>
+</tr>
+<tr>
+<td>bretagne</td>
+<td>108</td>
+<td>114.4</td>
+<td>6.4</td>
+</tr>
+<tr>
+<td>mayotte</td>
+<td>67.95</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>tom et collectivités territoriales</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p>Lorsqu'on observe les seuls établissements situés en zone urbaine, on constate alors de fortes disparités d'IPS entre public et privé dans la totalité des régions pour lesquelles nous avons des données. Cependant, la Bretagne et les Pays de la Loire restent moins touchés par ce phénomène.</p>
+<h3 id="15-conclusion">1.5 Conclusion</h3>
+<p>Cette analyse de l'indice de position sociale dans les écoles et collèges de France indique une forte disparité entre l'origine sociale des élèves de l'enseignement public et privé. De manière générale, les établissements privés accueillent en effet beaucoup moins d’élèves dont les parents vivent des difficultés sociales et économiques. </br>
+Plus précisément, c'est dans les zones urbaines que l'écart de mixité sociale entre public et privé se révèle le plus important. </br>
+On constate aussi d'importantes disparités régionales. Dans les territoires d'outre-mer tout d'abord, le fossé entre public et privé est gigantesque en Guyane, à la Réunion, en Martinique et dans une moindre mesure en Guadeloupe. A ce stade, je ne dipose pas des données des établissements privés de Mayotte. L'ile de France est la seule région métropolitaine dans laquelle l'écart public/privé est comparable à celui constaté dans certaines régions d'outre-mer. </br>
+Viennent ensuite les régions Corse, Hauts-de-France et Provence-Alpes-Côte d'Azur suivi par le Grand Est et le Centre-Val de Loire. Dans les autres régions, la différence est présente mais plus ténue et s'affirme notamment lorsqu'un filtre de densité de population est appliqué pour ne conserver que les zones urbaines.</p>
+
+</body>
+</html>

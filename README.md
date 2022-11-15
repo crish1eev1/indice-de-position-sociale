@@ -1,4 +1,4 @@
-# Etude de la répartition public/privé des établissements scolaires français
+# Etude de la mixité sociale entre public et privé dans les établissements scolaires français
 
 ## Sources utilisées
 
@@ -51,8 +51,8 @@ Le code permettant l'analyse de données ci-dessous est disponible sur github:
 - <a href="https://github.com/crish1eev1/public-private-distribution-french-schools/blob/main/data-analysis.ipynb">Analyse et visualisation des données</a>
 <br></br>
 
-## 1. Répartition public/privé des écoles françaises selon l'Indice de Position Sociale (IPS) selon des données de l'année scolaire 2021-2022
-#### Définition de l'Indice de Position Sociale selon wikipedia
+## Etude de la répartition public/privé des écoles françaises selon l'Indice de Position Sociale (IPS) pour l'année scolaire 2021-2022
+### Définition de l'Indice de Position Sociale selon wikipedia
 >L'indice de position sociale des élèves (IPS) est un outil de mesure quantitatif de la situation sociale des élèves face aux apprentissages dans les établissements scolaires français. **Plus l'indice est élevé, plus l'élève évolue dans un contexte familial favorable aux apprentissages. Cet indice est construit à partir des professions et catégories socioprofessionnelles (PCS) des représentants légaux des élèves**. 
 >Il est utilisé pour décrire les populations scolaires (milieu social plus ou moins favorable et mixité sociale) dans les écoles, collèges et lycées mais aussi pour classer les établissements scolaires et leur attribuer des moyens en conséquence. 
 L'indice de position sociale (IPS) des élèves est un indice sans dimension compris entre 38 et 1791. Plus cet indice est élevé, plus le contexte familial de l'élève est favorable à sa réussite scolaire. 
@@ -60,11 +60,11 @@ L'indice de position sociale (IPS) des élèves est un indice sans dimension com
 Note: les jeux de données fournissent un IPS par établissement pour les écoles et les collèges. Les graphiques et tableaux figurant dans la section 1 de ce document sont établis par établissement scolaire, sans pondération par le nombre d'élèves scolarisés dans chaque établissement.
 <br></br>
 
-###  1.1 Répartition public/privé des écoles et collèges de France selon IPS
+### Distribution des écoles et collèges public/privé de France selon IPS
 <a href="https://crish1eev1.github.io/images/graphs/violin-distribution-prive-public-selon-ips.html">
-  <img src="./graphs/violin-distribution-prive-public-selon-ips_no-title.png" alt="violin-distribution-prive-public-selon-ips" width="700">
+  <img src="./graphs/violin-distribution-prive-public-selon-ips_no-title.png" alt="violin-distribution-prive-public-selon-ips" width="800">
 </a>
-
+<br></br>
 
 |                    |   Nombre      |  IPS moyen |  Ecart-type |   Valeur minimum       |   Valeur Maximum       |   Mediane   |
 |--------------------|---------------|------------|-------------|------------------------|------------------------|-------------|
@@ -77,56 +77,46 @@ Note: les jeux de données fournissent un IPS par établissement pour les école
 On constate une disparité importante entre établissements publics et privés avec un IPS moyen supérieur dans le privé. Visuellement, on constate aussi des queues de distribution à l'allure inversée. En effet, la queue de distribution des établissements publics s'affine rapidement lorsque l'IPS augmente tandis qu'elle reste épaisse lorsque l'IPS baisse. Et inversement pour le privé. 
 <br></br>
 
-###  1.2 Répartition public/privé des établissments selon 7 tranches d'IPS
-Dans cette sous-partie, nous diviserons les établissements scolaires en 7 groupes en fonction de leur IPS. Ceci pour les écoles puis pour les collèges.  
-#### Répartition public/privé des écoles primaires selon IPS (en % du nombre d'établissements)
-
-<img src="./graphs/ecole_repartition-prive-public-selon-ips_no-title.png" alt="ecole_repartition-prive-public-selon-ips" width="700"/>
-
+### Répartition public/privé des écoles primaires selon 7 tranches d'IPS
+<img src="./graphs/ecole_repartition-prive-public-selon-ips_no-title.png" alt="ecole_repartition-prive-public-selon-ips" width="800"/>
 
 - Parmi les écoles avec un IPS inférieur à 90, seules 3,2% sont privées.
 - Parmi celles avec un IPS supérieur à 140, 60,3% sont privées.
+<br></br>
 
-#### Répartition public/privé des écoles primaires selon IPS (en valeur absolue du nombre d'établissements)
 |                    |   Moins de 90 |   90 à 100 |   100 à 110 |   110 à 120 |   120 à 130 |   130 à 140 |   Plus de 140 |
 |--------------------|---------------|------------|-------------|-------------|-------------|-------------|---------------|
 | écoles publiques   |          6069 |       6276 |        7276 |        4928 |        2134 |         708 |           158 |
 | écoles privées     |           202 |        763 |        1256 |        1040 |         653 |         388 |           240 |
 
+<br></br>
 
 
-
-#### Répartition public/privé des collèges selon IPS (en % du nombre d'établissements)
-
-<img src="./graphs/college_repartition-prive-public-selon-ips_no-title.png" alt="college_repartition-prive-public-selon-ips" width="700"/>
+### Répartition public/privé des collèges selon 7 tranches d'IPS
+<img src="./graphs/college_repartition-prive-public-selon-ips_no-title.png" alt="college_repartition-prive-public-selon-ips" width="800"/>
 
 - Parmi les collèges avec un IPS inférieur à 90, 5,7% sont privés.
 - Parmi ceux avec un IPS supérieur à 140, 77,9% sont privés.
+<br></br>
 
-#### Répartition public/privé des collèges selon IPS (en valeur absolue du nombre d'établissements)
 |                    |   Moins de 90 |   90 à 100 |   100 à 110 |   110 à 120 |   120 à 130 |   130 à 140 |   Plus de 140 |
 |--------------------|---------------|------------|-------------|-------------|-------------|-------------|---------------|
 | collèges publics   |          1268 |       1291 |        1468 |         812 |         325 |         105 |            34 |
 | collèges privés    |            76 |        245 |         396 |         383 |         270 |         169 |           120 |
 
+<br></br>
 
-</br>
 
-
-###  1.3 Répartition public/privé des établissments selon IPS et par région
-Avant d'anlyser les écarts entre régions dans le détail, voici un aperçu de la répartition géographique globale en France métropolitaine.</br>
-Cliquez sur les graphs si vous souhaitez naviguer vous même sur la carte. 
-
-#### Répartition géographique des écoles publiques/privées
+### Localisation géographique des écoles publiques/privées 
 <a href="https://crish1eev1.github.io/images/graphs/geolocation-ecole-prive-public-selon-ips.html" download="">
-  <img src="./graphs/geolocation-ecole-prive-public-selon-ips_no-title.png" alt="geolocation-ecole-prive-public-selon-ips" width="700">
+  <img src="./graphs/geolocation-ecole-prive-public-selon-ips_no-title.png" alt="geolocation-ecole-prive-public-selon-ips" width="800">
 </a>
 
 <font size ="1"> (cliquez sur l'image pour accéder à sa version dynamique) </font>
 
-#### Répartition géographique des collèges publics/privés
+### Localisation géographique des collèges publics/privés
 <a href="https://crish1eev1.github.io/images/graphs/geolocation-college-prive-public-selon-ips.html" download="">
-  <img src="./graphs/geolocation-college-prive-public-selon-ips_no-title.png" alt="geolocation-college-prive-public-selon-ips" width="700">
+  <img src="./graphs/geolocation-college-prive-public-selon-ips_no-title.png" alt="geolocation-college-prive-public-selon-ips" width="800">
 </a>
 
 <font size ="1"> (cliquez sur l'image pour accéder à sa version dynamique) </font>
@@ -136,18 +126,15 @@ La Bretagne et les Pays de la Loire constituent des exceptions à la règle avec
 
 
 
-#### Distribution public/privé des écoles par région selon IPS 
+### Distribution public/privé des écoles par région selon IPS 
 <a href="https://crish1eev1.github.io/images/graphs/boxplot-ecole-ips-selon-region.html" download="">
   <img src="./graphs/boxplot-ecole-ips-selon-region_no-title.png" alt="boxplot-ecole-ips-selon-region" width="1300">
 </a>
 
-<font size ="1"> (cliquez sur l'image pour accéder à sa version dynamique) </font>
-
-
 Ce type de représentation permet de figurer rapidement du profil essentiel d'une série statistique. Une "boîte" contient 50% des valeurs de sa série en allant du premier quartile au troisième quartile. Le trait visible à l'intérieur de chaque boîte représente la médiane de la série.</br>
 Ce graphique est segmenté par région en allant de celle ou l'écart d'IPS entre public et privé est le plus important (à gauche) pour finir par celle ou l'écart est le moins important (à droite). On notera que notre dataset ne contient pas les établissements privés de Mayotte. 
- 
-|                                    |  Médiane IPS public |   Médiane IPS privé  |   différence |
+
+|                                    |  Médiane IPS public |   Médiane IPS privé  |   Différence |
 |------------------------------------|---------------------|----------------------|--------------|
 | guyane                             |               66.2  |               108.4  |        42.2  |
 | la réunion                         |               76.05 |               114.45 |        38.4  |
@@ -171,15 +158,14 @@ Ce graphique est segmenté par région en allant de celle ou l'écart d'IPS entr
 
 On constate un écart très important entre IPS dans le public et le privé dans les territoires d'outre-mer, en Ile de France, en Corse, en PACA ainsi que dans les Hauts-de-France. Des régions connues pour leur forte disparité sociale. A l'inverse, on constate un faible écart entre public et privé en Bretagne ou Pays de la Loire. Nous avons observé précédemment que ces deux régions avaient comme particularité de comporter beaucoup d'écoles privées en zones rurales.
 
-#### Distribution public/privé des collèges par région selon IPS
+### Distribution public/privé des collèges par région selon IPS
 <a href="https://crish1eev1.github.io/images/graphs/boxplot-college-ips-selon-region.html" download="">
   <img src="./graphs/boxplot-college-ips-selon-region_no-title.png" alt="boxplot-college-ips-selon-region" width="1300">
 </a>
 
-<font size ="1"> (cliquez sur l'image pour accéder à sa version dynamique) </font>
+</br>
 
-
-|                                    |  Médiane IPS public |   Médiane IPS privé  |   différence |
+|                                    |  Médiane IPS public |   Médiane IPS privé  |   Différence |
 |------------------------------------|---------------------|----------------------|--------------|
 | guyane                             |               66.7  |               108.55 |        41.85 |
 | la réunion                         |               79.9  |               118.6  |        38.7  |
@@ -201,34 +187,29 @@ On constate un écart très important entre IPS dans le public et le privé dans
 | tom et collectivités territoriales |               78.6  |                      |              |
 | mayotte                            |               68.15 |                      |              |
 
+On retrouve approximativement le même classement pour les collèges que pour les écoles. 
 
-On retrouve quasiement le même classement pour les collèges que pour les écoles. 
-
-###  1.4 Répartition public/privé des établissments selon IPS par densité de population
-
+<br></br>
 Nous avons observé que les établissements privés étaient davantage concentrés dans les agglomérations, à l'exception notable de la Bretagne et des Pays de la Loire.
 Nous avons aussi constaté que ces deux régions font partie de celles où l'écart d’IPS entre public et privé est le plus faible. Il semble donc intéressant de segmenter nos observations selon la typologie de la commune (zone rurale ou zone urbaine) observée. De cette manière, nous pourrons déterminer si le faible écart d'IPS dans ces deux régions découle de l'implantation plus importante des établissements privés en zones rurales dans ces régions. 
  
 La segmentation écoles/collèges n’ayant révélé que peu de différences jusqu’à présent, nous regrouperons cette fois les écoles et collèges afin de maximiser le nombre d’observations par région. 
 
 
-#### Distribution public/privé des établissements selon densité de population 
+### Distribution public/privé des établissements selon IPS par type de densité de population 
 <a href="https://crish1eev1.github.io/images/graphs/boxplot-etablissement-ips-selon-zone-rurale.html" download="">
-  <img src="./graphs/boxplot-etablissement-ips-selon-zone-rurale_no-title.png" alt="boxplot-etablissement-ips-selon-zone-rurale" width="700">
+  <img src="./graphs/boxplot-etablissement-ips-selon-zone-rurale_no-title.png" alt="boxplot-etablissement-ips-selon-zone-rurale" width="800">
 </a>
-
-<font size ="1"> (cliquez sur l'image pour accéder à sa version dynamique) </font>
 
 En se limitant aux établissements de zones rurales, on constate qu'il n'y a plus qu'un faible écart d'IPS médian en faveur des établissements privés (100.5 versus 101.7). </br>
 Cet écart bondit pour les établissements scolaires de zones urbaines (102.8 versus 117.2).
 
-#### Distribution public/privé des établissements en zone ruale par région
+### Distribution public/privé des établissements selon IPS en zone rurale uniquement
 <a href="https://crish1eev1.github.io/images/graphs/boxplot-etablissements-rural-ips-selon-region.html" download="">
   <img src="./graphs/boxplot-etablissements-rural-ips-selon-region_no-title.png" alt="boxplot-etablissements-rural-ips-selon-region" width="1300">
 </a>
 
-<font size ="1"> (cliquez sur l'image pour accéder à sa version dynamique) </font>
-
+</br>
 
 |                                    |   Médiane IPS public |   Médiane IPS privé |   différence |
 |------------------------------------|---------------------|----------------------|--------------|
@@ -255,13 +236,12 @@ Cet écart bondit pour les établissements scolaires de zones urbaines (102.8 ve
 
 En zone rurale, seules 4 régions conservent un écart d'IPS médian supérieur à 10 entre privé et public. On y retrouve notamment certains territoires d'outre-mer ainsi que les Hauts-de-France. 
 
-#### Distribution public/privé des établissements en zone urbaine par région (année scolaire 2021-2022)
+### Distribution public/privé des établissements selon IPS en zone urbaine uniquement
 <a href="https://crish1eev1.github.io/images/graphs/boxplot-etablissements-urbain-ips-selon-region.html" download="">
   <img src="./graphs/boxplot-etablissements-urbain-ips-selon-region_no-title.png" alt="boxplot-etablissements-urbain-ips-selon-region" width="1300">
 </a>
 
-<font size ="1"> (cliquez sur l'image pour accéder à sa version dynamique) </font>
-
+</br>
 
 |                                    |   Médiane IPS public |   Médiane IPS privé |   différence |
 |------------------------------------|---------------------|----------------------|--------------|
@@ -289,8 +269,36 @@ En zone rurale, seules 4 régions conservent un écart d'IPS médian supérieur 
 Lorsqu'on observe les seuls établissements situés en zone urbaine, on constate alors de fortes disparités d'IPS entre public et privé dans la totalité des régions pour lesquelles nous avons des données. Cependant, la Bretagne et les Pays de la Loire restent moins touchés par ce phénomène.
 
 
-###  1.5 Conclusion 
-Cette analyse de l'indice de position sociale dans les écoles et collèges de France indique une forte disparité entre l'origine sociale des élèves de l'enseignement public et privé. De manière générale, les établissements privés accueillent en effet beaucoup moins d’élèves dont les parents vivent des difficultés sociales et économiques. </br>
-Plus précisément, c'est dans les zones urbaines que l'écart de mixité sociale entre public et privé se révèle le plus important. </br>
-On constate aussi d'importantes disparités régionales. Dans les territoires d'outre-mer tout d'abord, le fossé entre public et privé est gigantesque en Guyane, à la Réunion, en Martinique et dans une moindre mesure en Guadeloupe. A ce stade, je ne dipose pas des données des établissements privés de Mayotte. L'ile de France est la seule région métropolitaine dans laquelle l'écart public/privé est comparable à celui constaté dans certaines régions d'outre-mer. </br>
+## Etude de la répartition public/privé des écoles françaises selon le taux de réussite au diplome national du brevet pour l'année scolaire 2021-2022
+### Distribution publics/privés des collèges de France selon le taux de réussite au diplome du brevet de l'établissement
+<a href="https://crish1eev1.github.io/images/graphs/violin-distribution-prive-public-selon-dnd.html">
+  <img src="./graphs/violin-distribution-prive-public-selon-dnd_no-title.png" alt="violin-distribution-prive-public-selon-dnd" width="800">
+</a>
+
+<br></br>
+
+
+### Distribution publics/privés des collèges de France selon le taux de réussite au diplome du brevet ainsi que l'IPS de l'établissement
+<a href="https://crish1eev1.github.io/images/graphs/scatter-distribution-prive-public-selon-ips-et-dnb.html">
+  <img src="./graphs/scatter-distribution-prive-public-selon-ips-et-dnb_no-title.png" alt="scatter-distribution-prive-public-selon-ips-et-dnb_no-title" width="1300">
+</a>
+
+
+### Distribution publics/privés des collèges par région selon le taux de réussite au diplome du brevet ainsi que l'IPS de l'établissement 
+<a href="https://crish1eev1.github.io/images/graphs/scatter-distribution-prive-public-selon-ips-et-dnb-par-region.html">
+  <img src="./graphs/scatter-distribution-prive-public-selon-ips-et-dnb-par-region_no-title.png" alt="scatter-distribution-prive-public-selon-ips-et-dnb-par-region_no-title" width="1300">
+</a>
+
+### Distribution publics/privés des collèges par département selon le taux de réussite au diplome du brevet ainsi que l'IPS de l'établissement 
+<a href="https://crish1eev1.github.io/images/graphs/scatter-distribution-prive-public-selon-ips-et-dnb-par-departement.html">
+  <img src="./graphs/scatter-distribution-prive-public-selon-ips-et-dnb-par-departement_no-title.png" alt="scatter-distribution-prive-public-selon-ips-et-dnb-par-departement_no-title" width="1300">
+</a>
+
+<br></br>
+
+## Conclusion 
+
+Cette analyse de l'indice de position sociale dans les écoles et collèges de France indique une forte disparité entre l'origine sociale des élèves de l'enseignement public et privé. De manière générale, les établissements privés accueillent en effet beaucoup moins d’élèves dont les parents vivent des difficultés sociales et économiques. <br></br>
+Plus précisément, c'est dans les zones urbaines que l'écart de mixité sociale entre public et privé se révèle le plus important. <br></br>
+On constate aussi d'importantes disparités régionales. Dans les territoires d'outre-mer tout d'abord, le fossé entre public et privé est gigantesque en Guyane, à la Réunion, en Martinique et dans une moindre mesure en Guadeloupe. A ce stade, je ne dipose pas des données des établissements privés de Mayotte. L'ile de France est la seule région métropolitaine dans laquelle l'écart public/privé est comparable à celui constaté dans certaines régions d'outre-mer. <br></br>
 Viennent ensuite les régions Corse, Hauts-de-France et Provence-Alpes-Côte d'Azur suivi par le Grand Est et le Centre-Val de Loire. Dans les autres régions, la différence est présente mais plus ténue et s'affirme notamment lorsqu'un filtre de densité de population est appliqué pour ne conserver que les zones urbaines.

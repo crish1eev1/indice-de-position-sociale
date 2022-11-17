@@ -1,3 +1,6 @@
+ Click <a href="https://crish1eev1.github.io/report.html">here</a> to access the html version of this report
+
+
 # Etude de la mixité sociale entre public et privé dans les établissements scolaires français
 
 ## Sources utilisées

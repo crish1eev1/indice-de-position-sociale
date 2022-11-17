@@ -1,4 +1,4 @@
- Click <a href="https://crish1eev1.github.io/report.html">here</a> to access the html version of this report
+ Click <a href="https://crish1eev1.github.io/report.html" target=“_blank”>here</a> to access the html version of this report
 
 
 # Etude de la mixité sociale entre public et privé dans les établissements scolaires français
@@ -50,9 +50,9 @@
 </table>   
 
 Le code permettant l'analyse de données ci-dessous est disponible sur github:
-- <a href="https://github.com/crish1eev1/public-private-distribution-french-schools/blob/main/data-processing.ipynb">Collecte et structuration des données</a>
-- <a href="https://github.com/crish1eev1/public-private-distribution-french-schools/blob/main/data-analysis_ips.ipynb">Analyse et visualisation des données liées à l'Indice de Position Sociale</a>
-- <a href="https://github.com/crish1eev1/public-private-distribution-french-schools/blob/main/data-analysis_dnb.ipynb">Analyse et visualisation des données liées aux résultats du brevet</a>
+- <a href="https://github.com/crish1eev1/public-private-distribution-french-schools/blob/main/data-processing.ipynb" target=“_blank”>Collecte et structuration des données</a>
+- <a href="https://github.com/crish1eev1/public-private-distribution-french-schools/blob/main/data-analysis_ips.ipynb" target=“_blank”>Analyse et visualisation des données liées à l'Indice de Position Sociale</a>
+- <a href="https://github.com/crish1eev1/public-private-distribution-french-schools/blob/main/data-analysis_dnb.ipynb" target=“_blank”>Analyse et visualisation des données liées aux résultats du brevet</a>
 <br></br>
 
 ## Etude de la répartition public/privé des écoles françaises selon l'Indice de Position Sociale (IPS) pour l'année scolaire 2021-2022

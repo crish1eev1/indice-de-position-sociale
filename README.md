@@ -70,15 +70,15 @@ Note: les jeux de données fournissent un IPS par établissement pour les école
 </a>
 <br></br>
 
-|                    |   Nombre      |  IPS moyen |  Ecart-type |   Valeur minimum       |   Valeur Maximum       |   Mediane   |
-|--------------------|---------------|------------|-------------|------------------------|------------------------|-------------|
-| Ecoles publiques   |         27549 |      101.2 |     15.7    |                   49.6 |       155.6            |       101.9 |
-| Ecoles privées     |          4542 |      112.2 |       15.1  |                   56.8 |       155.4            |       110.4 |
-| Collèges publics   |         5303  |      99.9  |     15.3    |                   51.3 |       157.6            |       100.5 |
-| Collèges privés    |          1659 |      114.2 |       16.0  |                   66.0 |       154.9            |       112.8 |
+|                    |   Nombre      |  IPS moyen |  Ecart-type |   Valeur minimum       |   Valeur Maximum       |   Mediane   |  Skewness |
+|--------------------|---------------|------------|-------------|------------------------|------------------------|-------------|------------
+| Ecoles publiques   |         27549 |      101.2 |     15.7    |                   49.6 |       155.6            |       101.9 | -0.14     |
+| Ecoles privées     |          4542 |      112.2 |       15.1  |                   56.8 |       155.4            |       110.4 |  0.37     |
+| Collèges publics   |         5303  |      99.9  |     15.3    |                   51.3 |       157.6            |       100.5 | -0.04     |
+| Collèges privés    |          1659 |      114.2 |       16.0  |                   66.0 |       154.9            |       112.8 |  0.24     |
 
 
-On constate une disparité importante entre établissements publics et privés avec un IPS moyen supérieur dans le privé. Visuellement, on constate aussi des queues de distribution à l'allure inversée. En effet, la queue de distribution des établissements publics s'affine rapidement lorsque l'IPS augmente tandis qu'elle reste épaisse lorsque l'IPS baisse. Et inversement pour le privé. 
+On constate une disparité importante entre établissements publics et privés avec un IPS moyen supérieur dans le privé. Visuellement, on constate aussi des queues de distribution à l'allure inversée. En effet, la queue de distribution des établissements publics s'affine rapidement lorsque l'IPS augmente tandis qu'elle reste épaisse lorsque l'IPS baisse. Et inversement pour le privé. Cette impression visuelle est confirmée par la mesure de la disparité (skewness) qui n'est autre qu'une traduction statistique de ce qu'on vient d'observer. 
 <br></br>
 
 ### Répartition public/privé des écoles primaires selon 7 tranches d'IPS
